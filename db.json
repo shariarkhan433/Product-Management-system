@@ -1,10 +1,24 @@
 {
-    "brands": [
-        {
-            "id":1,
-            "name":"Amit"
-        }
-    ],
-    "products": [],
-    "orders": []
+  "brands": [
+    {
+      "id": 1,
+      "name": "Amit"
+    },
+    {
+      "id": 3,
+      "name": "Amit"
+    }
+  ],
+  "products": [],
+  "orders": [
+    {
+      "id": 12,
+      "orderNo": "asd",
+      "productID": "asdsa",
+      "quantity": 1232,
+      "salePrice": 3213,
+      "discount": 32,
+      "totalAmount": 243
+    }
+  ]
 }
