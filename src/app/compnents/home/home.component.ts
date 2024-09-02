@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
+import { BrandService } from '../../services/brand.service';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +12,11 @@ import {MatCardModule} from '@angular/material/card';
 export class HomeComponent {
   totalOrders: number=100;
   totalProducts:number=50;
-  totalBrands: number=10;
+  totalBrands!: number;
+  brandService = inject(BrandService)
+  ngOnInit(){
+    this.brandService.getBrands().subscribe(data=>
+      this.totalBrands=data.length
+    )
+  }
 }

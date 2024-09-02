@@ -1,0 +1,10 @@
+{
+    "brands": [
+        {
+            "id":1,
+            "name":"Amit"
+        }
+    ],
+    "products": [],
+    "orders": []
+}
