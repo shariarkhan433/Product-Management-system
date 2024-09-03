@@ -1,0 +1,55 @@
+<div class="flex justify-center">
+  <form [formGroup]="productForm" style="width: 900px" class="shadow border bg-white p-8">
+    <h1 class="text-xl font-semibold">Add Products</h1>
+    <div class="flex flex-wrap">
+
+      <!-- Start of the Form -->
+      <div class="w-full">
+        <mat-label>Product Name</mat-label>
+        <mat-form-field class="w-full">
+          <input type="text" matInput formControlName="name"/>
+        </mat-form-field>
+      </div>
+      <div class="w-full">
+        <mat-label>Product Details</mat-label>
+        <mat-form-field class="w-full">
+          <input type="text" matInput formControlName="details"/>
+        </mat-form-field>
+      </div>
+      <div class="w-full">
+        <mat-label>Brand Name</mat-label>
+        <mat-form-field class="w-full">
+          <mat-select type="text" matInput formControlName="brandId">
+            @for(brand of brands; track $index){
+              <mat-option [value]="brand.id">{{brand.name}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="w-full">
+        <mat-label>Purchase Price</mat-label>
+        <mat-form-field class="w-full">
+          <input type="number" matInput formControlName="purchasedPrice"/>
+        </mat-form-field>
+      </div>
+      <div class="w-full">
+        <mat-label>Sale Price</mat-label>
+        <mat-form-field class="w-full">
+          <input type="number" matInput formControlName="salesPrice"/>
+        </mat-form-field>
+      </div>
+      <div class="w-full">
+        <mat-label>Available Quantity</mat-label>
+        <mat-form-field class="w-full">
+          <input type="number" matInput formControlName="availableQuantity"/>
+        </mat-form-field>
+      </div>
+      <!-- End of the Form -->
+
+      <!-- Start of the Button -->
+      <div class="w-full flex justify-center">
+        <button mat-raised-button color="primary" (click)="addProduct()">Add</button>
+      </div>
+    </div>
+  </form>
+</div>

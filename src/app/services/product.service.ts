@@ -12,4 +12,7 @@ export class ProductService {
   getProducts(){
     return this.httpClient.get<Product[]>(environment.apiURL+'/products');
   }
+  addProduct(product:Product){
+    return this.httpClient.post<Product>(environment.apiURL + '/products', product);
+  }
 }

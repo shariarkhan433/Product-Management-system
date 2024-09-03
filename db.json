@@ -21,7 +21,17 @@
       "name": "work"
     }
   ],
-  "products": [],
+  "products": [
+    {
+      "id": "ffd9",
+      "name": "LG",
+      "details": "Life is not Good",
+      "brandId": "7b20",
+      "purchasedPrice": 35000,
+      "salesPrice": 45000,
+      "availableQuantity": 34
+    }
+  ],
   "orders": [
     {
       "id": "12",
