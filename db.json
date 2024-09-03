@@ -1,18 +1,30 @@
 {
   "brands": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Amit"
     },
     {
-      "id": 3,
-      "name": "Amit"
+      "id": "3",
+      "name": "Xing Ping"
+    },
+    {
+      "id": "01eb",
+      "name": "Apple"
+    },
+    {
+      "id": "7b20",
+      "name": "AppleChorki"
+    },
+    {
+      "id": "8779",
+      "name": "work"
     }
   ],
   "products": [],
   "orders": [
     {
-      "id": 12,
+      "id": "12",
       "orderNo": "asd",
       "productID": "asdsa",
       "quantity": 1232,

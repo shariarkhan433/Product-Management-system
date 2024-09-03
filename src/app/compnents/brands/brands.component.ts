@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import Brand from '../../types/brand';
 import { BrandService } from '../../services/brand.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-brands',
@@ -18,13 +19,14 @@ import { BrandService } from '../../services/brand.service';
     MatSortModule,
     MatPaginatorModule,
     MatButtonModule,
+    RouterLink
   ],
   templateUrl: './brands.component.html',
   styleUrls: ['./brands.component.css'], // Fixed the typo from `styleUrl` to `styleUrls`
 })
 export class BrandsComponent implements OnInit {
   displayedColumns: string[] = ['name', 'action'];
-  dataSource: MatTableDataSource<Brand>; // Correct instantiation
+  dataSource !: MatTableDataSource<Brand>; // Correct instantiation
   brandService = inject(BrandService);
 
   constructor() {
