@@ -19,6 +19,14 @@
     {
       "id": "8779",
       "name": "work"
+    },
+    {
+      "id": "e9e6",
+      "name": "Sumsang"
+    },
+    {
+      "id": "3748",
+      "name": "Sony"
     }
   ],
   "products": [
@@ -30,6 +38,15 @@
       "purchasedPrice": 35000,
       "salesPrice": 45000,
       "availableQuantity": 34
+    },
+    {
+      "id": "a04d",
+      "name": "S21 Ultra",
+      "details": "The Old flagship smartphone",
+      "brandId": "e9e6",
+      "purchasedPrice": 50000,
+      "salesPrice": 60000,
+      "availableQuantity": 60
     }
   ],
   "orders": [
