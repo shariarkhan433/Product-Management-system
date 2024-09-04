@@ -1,0 +1,68 @@
+<div class="flex justify-center">
+  <form
+    [formGroup]="orderForm"
+    style="width: 900px"
+    class="shadow border bg-white  p-8"
+  >
+    <h1 class="text-xl font-semibold">Add Products</h1>
+    <div class="flex flex-wrap">
+
+      <!--Start of Input Field -->
+      <div class="w-full">
+        <mat-label>Orders Number</mat-label>
+        <mat-form-field class="w-full" appearance="outline">
+          <input type="text" matInput formControlName="orderNo"/>
+        </mat-form-field>
+      </div>
+
+        <div class="w-full">
+        <mat-label>Product</mat-label>
+        <mat-form-field class="w-full" appearance="outline">
+          <mat-select formControlName="productID" (valueChange)="productSelected($event)" >
+            @for (item of products; track $index) {
+              <mat-option [value]="item.id" >
+                {{item.name}}(available quantity{{item.availableQuantity}})
+              </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+        <div class="w-4/12 pr-2">
+        <mat-label> Quantity</mat-label>
+        <mat-form-field class="w-full" appearance="outline">
+          <input type="text" matInput formControlName="quantity" />
+        </mat-form-field>
+      </div>
+
+        <div class="w-4/12 pr-2">
+        <mat-label>Sales Price</mat-label>
+        <mat-form-field class="w-full" appearance="outline">
+          <input type="text" matInput formControlName="salePrice"/>
+        </mat-form-field>
+      </div>
+
+      <div class="w-4/12 pr-2">
+        <mat-label>Discount Price</mat-label>
+        <mat-form-field class="w-full" appearance="outline">
+          <input type="text" matInput  formControlName="discount"/>
+        </mat-form-field>
+      </div>
+
+      <div class="w-full">
+        <mat-label>Total Amount</mat-label>
+        <mat-form-field class="w-full" appearance="outline">
+          <input type="text" matInput formControlName="totalAmount"/>
+        </mat-form-field>
+      </div>
+      <!-- End of the Input field -->
+
+      <!-- Start of the Button -->
+      <div class="w-full flex justify-center">
+
+          <button mat-raised-button color="primary" (click)="addOrder()">Add</button>
+
+      </div>
+    </div>
+  </form>
+</div>

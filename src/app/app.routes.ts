@@ -4,6 +4,8 @@ import { BrandFormComponent } from './compnents/brands/brand-form/brand-form.com
 import { BrandsComponent } from './compnents/brands/brands.component';
 import { ProductsComponent } from './compnents/products/products.component';
 import { ProductFormComponent } from './compnents/products/product-form/product-form.component';
+import { OrderComponent } from './compnents/order/order.component';
+import { OrderFormComponent } from './compnents/order/order-form/order-form.component';
 
 export const routes: Routes = [
   {
@@ -33,5 +35,17 @@ export const routes: Routes = [
   {
     path: 'products/:id',
     component: ProductFormComponent,
+  },
+  {
+    path: 'order',
+    component: OrderComponent,
+  },
+  {
+    path: 'order/add',
+    component: OrderFormComponent,
+  },
+  {
+    path: 'order/:id',
+    component: OrderFormComponent,
   },
 ];

@@ -6,7 +6,7 @@
     },
     {
       "id": "3",
-      "name": "Xing Ping"
+      "name": "Xiomi"
     },
     {
       "id": "01eb",
@@ -47,6 +47,15 @@
       "purchasedPrice": 50000,
       "salesPrice": 60000,
       "availableQuantity": 60
+    },
+    {
+      "id": "ab25",
+      "name": "Remi note 10 pro",
+      "details": "A smartphone",
+      "brandId": "3",
+      "purchasedPrice": 24000,
+      "salesPrice": 18000,
+      "availableQuantity": 10
     }
   ],
   "orders": [
@@ -58,6 +67,15 @@
       "salePrice": 3213,
       "discount": 32,
       "totalAmount": 243
+    },
+    {
+      "id": "4b0b",
+      "orderNo": "1st",
+      "productID": "ab25",
+      "quantity": "2",
+      "salePrice": 18000,
+      "discount": "4000",
+      "totalAmount": 32000
     }
   ]
 }

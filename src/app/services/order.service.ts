@@ -12,4 +12,7 @@ export class OrderService {
   getOrders(){
     return this.httpClient.get<Order[]>(environment.apiURL+'/orders');
   }
+  addOrder(order: Order){
+    return this.httpClient.post<Order>(environment.apiURL+'/orders',order);
+  }
 }
