@@ -7,7 +7,7 @@ import { BrandService } from '../../../services/brand.service';
 import Brand from '../../../types/brand';
 import { ProductService } from '../../../services/product.service';
 import Product from '../../../types/product';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-form',
@@ -30,10 +30,20 @@ export class ProductFormComponent {
   productService = inject(ProductService);
   brands:Brand[]=[];
   router = inject(Router);
+  route = inject(ActivatedRoute);
+  product!: Product;
 
   //Fetching the data from database
   ngOnInit(){
+    let id = this.route.snapshot.params['id'];
+    console.log(id)
     this.brandService.getBrands().subscribe((result)=>this.brands=result);
+    if(id){
+      this.productService.getProduct(id).subscribe(result=>{
+        this.product=result;
+        this.productForm.patchValue(this.product);
+      })
+    }
   }
 
   //Adding the products
@@ -46,6 +56,17 @@ export class ProductFormComponent {
     let product: Product = this.productForm.value;
     this.productService.addProduct(product).subscribe(result=>{
       alert("Your Product is added succesfully");
+      this.router.navigateByUrl('/products');
+    });
+  }
+  updateProduct(){
+    if (this.productForm.invalid) {
+      alert('Please provide all details');
+      return;
+    }
+    let product: Product = this.productForm.value;
+    this.productService.updateProduct(this.product.id!, product).subscribe((result) => {
+      alert('Your Product is update succesfully');
       this.router.navigateByUrl('/products');
     });
   }

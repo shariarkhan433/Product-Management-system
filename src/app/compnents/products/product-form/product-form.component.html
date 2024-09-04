@@ -1,6 +1,11 @@
 <div class="flex justify-center">
   <form [formGroup]="productForm" style="width: 900px" class="shadow border bg-white p-8">
-    <h1 class="text-xl font-semibold">Add Products</h1>
+    @if (product) {
+      <h1 class="text-xl font-semibold">Update Products</h1>
+    }
+    @else {
+      <h1 class="text-xl font-semibold">Add Products</h1>
+    }
     <div class="flex flex-wrap">
 
       <!-- Start of the Form -->
@@ -48,7 +53,12 @@
 
       <!-- Start of the Button -->
       <div class="w-full flex justify-center">
-        <button mat-raised-button color="primary" (click)="addProduct()">Add</button>
+        @if (product) {
+          <button mat-raised-button color="primary" (click)="updateProduct()">Update</button>
+        }
+        @else {
+          <button mat-raised-button color="primary" (click)="addProduct()">Add</button>
+        }
       </div>
     </div>
   </form>

@@ -31,13 +31,13 @@
   ],
   "products": [
     {
-      "id": "ffd9",
       "name": "LG",
-      "details": "Life is not Good",
-      "brandId": "7b20",
+      "details": "Life was Good",
+      "brandId": "3748",
       "purchasedPrice": 35000,
       "salesPrice": 45000,
-      "availableQuantity": 34
+      "availableQuantity": 34,
+      "id": "ffd9"
     },
     {
       "id": "a04d",
