@@ -7,6 +7,7 @@ import { ProductService } from '../../services/product.service';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule,MatSort } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-products',
@@ -18,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
     MatPaginatorModule,
     MatSortModule,
     MatInputModule,
+    CommonModule,
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
@@ -31,8 +33,8 @@ export class ProductsComponent {
     'details',
     'brandId',
     'purchasedPrice',
-    'salesPrice',
     'availableQuantity',
+    'date',
     'action',
   ];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -45,13 +47,13 @@ export class ProductsComponent {
   }
   initTable() {
     this.datasource = new MatTableDataSource(this.products);
-     this.datasource.paginator = this.paginator;
-     this.datasource.sort = this.sort;
+    this.datasource.paginator = this.paginator;
+    this.datasource.sort = this.sort;
   }
   applyFilter(event: Event) {
-        this.datasource.filter = (event.target as HTMLInputElement).value
-          .trim()
-          .toLowerCase();
-        this.paginator.firstPage();
+    this.datasource.filter = (event.target as HTMLInputElement).value
+      .trim()
+      .toLowerCase();
+    this.paginator.firstPage();
   }
 }

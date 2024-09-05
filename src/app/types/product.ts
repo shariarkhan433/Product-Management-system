@@ -5,5 +5,6 @@ export default interface Product {
   brandID: string;
   purchasedPrice: number;
   salesPrice: number;
+  date:Date;
   availableQuantity: number;
 }

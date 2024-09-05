@@ -56,6 +56,26 @@
       "purchasedPrice": 24000,
       "salesPrice": 18000,
       "availableQuantity": 6
+    },
+    {
+      "name": "Big TV",
+      "details": "It is a big TV",
+      "brandId": "8779",
+      "purchasedPrice": 20000,
+      "salesPrice": 30000,
+      "date": "2024-09-04T18:00:00.000Z",
+      "availableQuantity": 12,
+      "id": "5bbf"
+    },
+    {
+      "name": "Pixel 6 pro",
+      "details": "It is the latest flagship phone",
+      "brandId": "3748",
+      "purchasedPrice": 45000,
+      "salesPrice": 53000,
+      "date": "2024-09-04T18:00:00.000Z",
+      "availableQuantity": 15,
+      "id": "2434"
     }
   ],
   "orders": [
