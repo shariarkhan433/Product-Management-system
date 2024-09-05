@@ -59,16 +59,6 @@
       "salesPrice": 333,
       "date": "2024-09-05T11:53:13.337Z",
       "availableQuantity": 1
-    },
-    {
-      "id": "c257",
-      "name": "iphone 7s",
-      "details": "newer",
-      "brandId": "01eb",
-      "purchasedPrice": 99999,
-      "salesPrice": 333,
-      "date": "2024-09-05T11:54:10.437Z",
-      "availableQuantity": 77
     }
   ],
   "orders": [

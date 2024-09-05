@@ -67,7 +67,8 @@ export class ProductsComponent {
       this.products = this.products.filter(
         (product) => Number(product.id) !== productId
       );
-      this.initTable(); // Reinitialize table after deletion
+      this.initTable();
+       window.location.reload();
     });
   }
 }
