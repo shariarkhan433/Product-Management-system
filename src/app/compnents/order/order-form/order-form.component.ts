@@ -49,9 +49,18 @@ export class OrderFormComponent {
       alert("Please provide all details");
       return;
     }
-    console.log(this.orderForm.value);
     let formValue = this.orderForm.getRawValue() as Order
+    if (formValue.quantity!>this.selectProduct!.availableQuantity) {
+      alert("Only "+
+        this.selectProduct?.availableQuantity!+" unit is available right now"
+      );
+      return;
+    }
+
+    console.log(this.orderForm.value);
     this.orderService.addOrder(formValue).subscribe(()=>{
+      this.selectProduct!.availableQuantity! -= formValue.quantity!;
+      this.productService.updateProduct(this.selectProduct!.id!,this.selectProduct!).subscribe();
       alert('Your order has been placed successfully');
       this.router.navigateByUrl('/order');
     })

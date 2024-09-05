@@ -55,7 +55,7 @@
       "brandId": "3",
       "purchasedPrice": 24000,
       "salesPrice": 18000,
-      "availableQuantity": 10
+      "availableQuantity": 6
     }
   ],
   "orders": [
@@ -76,6 +76,15 @@
       "salePrice": 18000,
       "discount": "4000",
       "totalAmount": 32000
+    },
+    {
+      "id": "f8b5",
+      "orderNo": "2",
+      "productID": "ab25",
+      "quantity": "4",
+      "salePrice": 18000,
+      "discount": "2000",
+      "totalAmount": 70000
     }
   ]
 }

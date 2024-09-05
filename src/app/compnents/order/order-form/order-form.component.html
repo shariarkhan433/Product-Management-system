@@ -21,7 +21,7 @@
           <mat-select formControlName="productID" (valueChange)="productSelected($event)" >
             @for (item of products; track $index) {
               <mat-option [value]="item.id" >
-                {{item.name}}(available quantity{{item.availableQuantity}})
+                {{item.name}}(available quantity: {{item.availableQuantity}})
               </mat-option>
             }
           </mat-select>
