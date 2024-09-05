@@ -1,15 +1,15 @@
 <div class="flex justify-center">
   <form style="width: 600px;" class="shadow border bg-white p-8">
-    <mat-label>Brand Name</mat-label>
+    <mat-label>Write down the Category</mat-label>
     <mat-form-field appearance="outline" class="w-full">
       <input type="text" matInput name="name" [(ngModel)]="name" />
     </mat-form-field>
-    <div class="w-full flex justify-center">
+    <div class="w-full flex justify-center" >
       @if (brand) {
-        <button mat-raised-button color="primary" (click)="updateBrand()">Update</button>
+        <button mat-raised-button color="primary" (click)="updateBrand()" class="custom-pink-button">Update</button>
       }
       @else {
-        <button mat-raised-button color="primary" (click)="addBrand()">Add</button>
+        <button mat-raised-button color="primary" (click)="addBrand()" class="custom-pink-button">Add</button>
       }
     </div>
   </form>

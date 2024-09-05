@@ -42,7 +42,7 @@ export class BrandFormComponent {
       name: this.name,
     };
     this.brandService.addBrand(brand).subscribe((data) => {
-      this.toastar.success("Brand has been added","Success");
+      this.toastar.success("Category has been added","Success");
       this.router.navigateByUrl('/brands');
     });
   }
@@ -57,7 +57,7 @@ export class BrandFormComponent {
       name: this.name,
     };
     this.brandService.updateBrand(brand).subscribe((data) => {
-      this.toastar.success('Brand has been updated', 'Success');
+      this.toastar.success('Category has been updated', 'Success');
       this.router.navigateByUrl('/brands');
     });
   }

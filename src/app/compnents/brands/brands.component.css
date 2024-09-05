@@ -1,11 +1,23 @@
 .custom-pink-button {
-  background-color: #c57d95;
+  background-color: #06045c;
   /* Pinkish color */
-  color: white;
+  color: rgb(228, 231, 243);
   /* Text color */
 }
 
 .custom-pink-button:hover {
-  background-color: #c26285;
+  background-color: #0d70cc;
   /* Slightly darker pink on hover */
+  color: aliceblue;
+}
+.button-spacing {
+  margin-right: 14px;
+  /* Adjust the value as needed */
+}
+.button-container {
+  display: flex;
+  align-items: center;
+  /* Align items vertically centered */
+  gap: 8px;
+  /* Space between buttons */
 }

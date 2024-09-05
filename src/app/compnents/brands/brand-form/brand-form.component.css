@@ -1,0 +1,12 @@
+.custom-pink-button {
+  background-color: #06045c;
+  /* Pinkish color */
+  color: rgb(228, 231, 243);
+  /* Text color */
+}
+
+.custom-pink-button:hover {
+  background-color: #0d70cc;
+  /* Slightly darker pink on hover */
+  color: aliceblue;
+}

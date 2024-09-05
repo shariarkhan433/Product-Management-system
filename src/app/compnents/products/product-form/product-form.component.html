@@ -25,10 +25,10 @@
       </div>
       <div class="w-full">
         <mat-label>Brand Name</mat-label>
-        <mat-form-field class="w-full">
-          <mat-select type="text" matInput formControlName="brandId">
+        <mat-form-field class="w-full" >
+          <mat-select type="text" matInput formControlName="brandId" placeholder="--Please Select--">
             @for(brand of brands; track $index){
-            <mat-option [value]="brand.id">{{ brand.name }}</mat-option>
+            <mat-option [value]="brand.name">{{ brand.name }}</mat-option>
             }
           </mat-select>
         </mat-form-field>

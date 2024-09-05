@@ -1,64 +1,36 @@
 {
   "brands": [
     {
-      "id": "1",
-      "name": "Amit"
-    },
-    {
       "id": "3",
       "name": "Xiomi"
     },
     {
-      "id": "01eb",
-      "name": "Apple"
+      "id": "a117",
+      "name": "Fitness And Health"
     },
     {
-      "id": "7b20",
-      "name": "AppleChorki"
+      "id": "9b33",
+      "name": "Super Food"
     },
     {
-      "id": "8779",
-      "name": "work"
+      "id": "671a",
+      "name": "Beauty Products"
     },
     {
-      "id": "e9e6",
-      "name": "Sumsang"
-    },
-    {
-      "id": "3748",
-      "name": "Sony"
+      "id": "bd8e",
+      "name": "Electronics"
     }
   ],
   "products": [
     {
-      "name": "Pixel 6 pro",
-      "details": "It is the latest flagship phone",
-      "brandId": "3748",
-      "purchasedPrice": 45000,
-      "salesPrice": 53000,
-      "date": "2024-09-04T18:00:00.000Z",
-      "availableQuantity": 15,
-      "id": "2434"
-    },
-    {
-      "id": "031f",
-      "name": "Realme max pro",
-      "details": "Realme Flagship products",
-      "brandId": "7b20",
-      "purchasedPrice": 300000,
-      "salesPrice": 21312,
-      "date": "2024-09-05T11:09:29.306Z",
-      "availableQuantity": 44
-    },
-    {
-      "id": "4430",
-      "name": "Iphone 6s",
-      "details": "Old Iphone",
-      "brandId": "01eb",
-      "purchasedPrice": 99999,
-      "salesPrice": 333,
-      "date": "2024-09-05T11:53:13.337Z",
-      "availableQuantity": 1
+      "id": "fb19",
+      "name": "aas",
+      "details": "sadas",
+      "brandId": "Apple",
+      "purchasedPrice": 213,
+      "salesPrice": 121,
+      "date": "2024-09-05T14:52:08.407Z",
+      "availableQuantity": 34
     }
   ],
   "orders": [

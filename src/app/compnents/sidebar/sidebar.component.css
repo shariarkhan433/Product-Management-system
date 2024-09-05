@@ -1,0 +1,10 @@
+.mat-list-item {
+  transition: box-shadow 0.3s ease;
+  /* Smooth transition for the glow effect */
+  background-color: rgb(64, 107, 248);
+}
+
+.mat-list-item:hover {
+  box-shadow: 0 0 10px 2px white;
+  /* White glow effect */
+}

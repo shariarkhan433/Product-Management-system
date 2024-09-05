@@ -21,6 +21,12 @@ export class BrandService {
     );
   }
   updateBrand(brand: Brand) {
-    return this.httpClient.put<Brand>(environment.apiURL + '/brands/'+ brand.id ,brand);
+    return this.httpClient.put<Brand>(
+      environment.apiURL + '/brands/' + brand.id,
+      brand
+    );
+  }
+  deleteProduct(id: string) {
+    return this.httpClient.delete<void>(`${environment.apiURL}/products/${id}`);
   }
 }
