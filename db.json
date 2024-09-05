@@ -31,43 +31,6 @@
   ],
   "products": [
     {
-      "name": "LG",
-      "details": "Life was Good",
-      "brandId": "3748",
-      "purchasedPrice": 35000,
-      "salesPrice": 45000,
-      "availableQuantity": 34,
-      "id": "ffd9"
-    },
-    {
-      "id": "a04d",
-      "name": "S21 Ultra",
-      "details": "The Old flagship smartphone",
-      "brandId": "e9e6",
-      "purchasedPrice": 50000,
-      "salesPrice": 60000,
-      "availableQuantity": 60
-    },
-    {
-      "id": "ab25",
-      "name": "Remi note 10 pro",
-      "details": "A smartphone",
-      "brandId": "3",
-      "purchasedPrice": 24000,
-      "salesPrice": 18000,
-      "availableQuantity": 6
-    },
-    {
-      "name": "Big TV",
-      "details": "It is a big TV",
-      "brandId": "8779",
-      "purchasedPrice": 20000,
-      "salesPrice": 30000,
-      "date": "2024-09-04T18:00:00.000Z",
-      "availableQuantity": 12,
-      "id": "5bbf"
-    },
-    {
       "name": "Pixel 6 pro",
       "details": "It is the latest flagship phone",
       "brandId": "3748",
@@ -106,16 +69,6 @@
       "salesPrice": 333,
       "date": "2024-09-05T11:54:10.437Z",
       "availableQuantity": 77
-    },
-    {
-      "id": "e3e6",
-      "name": "Symphony",
-      "details": "Old phone",
-      "brandId": "3748",
-      "purchasedPrice": 1233,
-      "salesPrice": 1243,
-      "date": "2024-09-05T12:15:22.624Z",
-      "availableQuantity": 34
     }
   ],
   "orders": [

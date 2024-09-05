@@ -8,6 +8,10 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule,MatSort } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-products',
@@ -20,6 +24,7 @@ import { CommonModule } from '@angular/common';
     MatSortModule,
     MatInputModule,
     CommonModule,
+    MatIconModule,
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
@@ -28,6 +33,7 @@ export class ProductsComponent {
   datasource!: MatTableDataSource<Product>;
   productService = inject(ProductService);
   products: Product[] = [];
+  httpClient = inject(HttpClient);
   displayedColumns = [
     'name',
     'details',
@@ -55,5 +61,13 @@ export class ProductsComponent {
       .trim()
       .toLowerCase();
     this.paginator.firstPage();
+  }
+  deleteProduct(productId: number): void {
+    this.productService.deleteProduct(productId).subscribe(() => {
+      this.products = this.products.filter(
+        (product) => Number(product.id) !== productId
+      );
+      this.initTable(); // Reinitialize table after deletion
+    });
   }
 }
