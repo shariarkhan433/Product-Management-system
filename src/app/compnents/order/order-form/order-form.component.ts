@@ -8,6 +8,7 @@ import Product from '../../../types/product';
 import { MatButtonModule } from '@angular/material/button';
 import { OrderService } from '../../../services/order.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-order-form',
@@ -25,6 +26,8 @@ export class OrderFormComponent {
   formbuilder = inject(FormBuilder);
   productService = inject(ProductService);
   orderService = inject(OrderService);
+  toaster = inject(ToastrService);
+
   orderForm = this.formbuilder.group<Order>({
     orderNo: '',
     productID: '',
@@ -51,8 +54,9 @@ export class OrderFormComponent {
     }
     let formValue = this.orderForm.getRawValue() as Order
     if (formValue.quantity!>this.selectProduct!.availableQuantity) {
-      alert("Only "+
-        this.selectProduct?.availableQuantity!+" unit is available right now"
+      this.toaster.warning(
+        this.selectProduct?.availableQuantity! + 'unit is available right now',
+        'Halt'
       );
       return;
     }
@@ -61,7 +65,7 @@ export class OrderFormComponent {
     this.orderService.addOrder(formValue).subscribe(()=>{
       this.selectProduct!.availableQuantity! -= formValue.quantity!;
       this.productService.updateProduct(this.selectProduct!.id!,this.selectProduct!).subscribe();
-      alert('Your order has been placed successfully');
+      this.toaster.success('Your order has been placed successfully','Done');
       this.router.navigateByUrl('/order');
     })
   }

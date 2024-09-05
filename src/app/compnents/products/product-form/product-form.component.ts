@@ -9,6 +9,7 @@ import { ProductService } from '../../../services/product.service';
 import Product from '../../../types/product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-product-form',
@@ -31,7 +32,7 @@ export class ProductFormComponent {
     brandId: ['', [Validators.required]],
     purchasedPrice: ['', [Validators.required]],
     salesPrice: ['', [Validators.required]],
-    date: [new Date],
+    date: [new Date()],
     availableQuantity: ['', [Validators.required]],
   });
   brandService = inject(BrandService);
@@ -40,6 +41,7 @@ export class ProductFormComponent {
   router = inject(Router);
   route = inject(ActivatedRoute);
   product!: Product;
+  toaster = inject(ToastrService)
 
   //Fetching the data from database
   ngOnInit() {
@@ -58,25 +60,25 @@ export class ProductFormComponent {
   addProduct() {
     console.log(this.productForm.value);
     if (this.productForm.invalid) {
-      alert('Please fill-up all field');
+      this.toaster.warning('Please fill all the data', 'Halt');
       return;
     }
     let product: Product = this.productForm.value;
     this.productService.addProduct(product).subscribe((result) => {
-      alert('Your Product is added succesfully');
+      this.toaster.success("Task has been successfully added","Success");
       this.router.navigateByUrl('/products');
     });
   }
   updateProduct() {
     if (this.productForm.invalid) {
-      alert('Please provide all details');
+      this.toaster.success("Please fill all the data","Halt");
       return;
     }
     let product: Product = this.productForm.value;
     this.productService
       .updateProduct(this.product.id!, product)
       .subscribe((result) => {
-        alert('Your Product is update succesfully');
+        this.toaster.success("Your Product update is successfull","Success")
         this.router.navigateByUrl('/products');
       });
   }

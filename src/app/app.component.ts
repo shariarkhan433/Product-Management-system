@@ -7,9 +7,14 @@ import { HomeComponent } from './compnents/home/home.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, SidebarComponent, HomeComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    SidebarComponent,
+    HomeComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'myapp';

@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import Brand from '../../../types/brand';
 import { BrandService } from '../../../services/brand.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-brand-form',
@@ -20,6 +21,7 @@ export class BrandFormComponent {
   router = inject(Router);
   route = inject(ActivatedRoute);
   brand!: Brand;
+  toastar = inject(ToastrService)
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
     console.log(id);
@@ -33,21 +35,21 @@ export class BrandFormComponent {
   addBrand() {
     console.log(this.name + ' Brand has been added');
     if (!this.name) {
-      alert('Please insert some value');
+      this.toastar.warning('Please insert some value', 'Halt');
       return;
     }
     let brand: Brand = {
       name: this.name,
     };
     this.brandService.addBrand(brand).subscribe((data) => {
-      alert('Brand has been added');
+      this.toastar.success("Brand has been added","Success");
       this.router.navigateByUrl('/brands');
     });
   }
   updateBrand() {
     console.log(this.name + ' Brand has been updated');
     if (!this.name) {
-      alert('Please insert some value');
+      this.toastar.warning('Please insert some value', 'Halt');
       return;
     }
     let brand: Brand = {
@@ -55,7 +57,7 @@ export class BrandFormComponent {
       name: this.name,
     };
     this.brandService.updateBrand(brand).subscribe((data) => {
-      alert('Brand updated succesfully');
+      this.toastar.success('Brand has been updated', 'Success');
       this.router.navigateByUrl('/brands');
     });
   }
