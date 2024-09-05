@@ -1,10 +1,6 @@
 {
   "brands": [
     {
-      "id": "3",
-      "name": "Xiomi"
-    },
-    {
       "id": "a117",
       "name": "Fitness And Health"
     },
@@ -19,6 +15,18 @@
     {
       "id": "bd8e",
       "name": "Electronics"
+    },
+    {
+      "id": "17c1",
+      "name": "Groceries"
+    },
+    {
+      "id": "782f",
+      "name": "Furniture"
+    },
+    {
+      "id": "d0bc",
+      "name": "Extra Things"
     }
   ],
   "products": [
@@ -31,6 +39,76 @@
       "salesPrice": 121,
       "date": "2024-09-05T14:52:08.407Z",
       "availableQuantity": 34
+    },
+    {
+      "id": "9537",
+      "name": "Broccoli",
+      "details": "A vegetable Found on North America",
+      "brandId": "Super Food",
+      "purchasedPrice": 1000,
+      "salesPrice": 1400,
+      "date": "2024-09-05T15:16:25.423Z",
+      "availableQuantity": 14
+    },
+    {
+      "id": "ea2a",
+      "name": "Galaxy Treadmill",
+      "details": "A Running Device",
+      "brandId": "Fitness And Health",
+      "purchasedPrice": 8000,
+      "salesPrice": 16000,
+      "date": "2024-09-05T15:17:37.905Z",
+      "availableQuantity": 24
+    },
+    {
+      "id": "f95b",
+      "name": "Tibbat snow",
+      "details": "A traditional name of cosmetics",
+      "brandId": "Beauty Products",
+      "purchasedPrice": 2000,
+      "salesPrice": 3000,
+      "date": "2024-09-05T15:22:13.995Z",
+      "availableQuantity": 48
+    },
+    {
+      "id": "7053",
+      "name": "Redmi note 10 pro",
+      "details": "Best budget to money ratio smartphone",
+      "brandId": "Electronics",
+      "purchasedPrice": 20000,
+      "salesPrice": 24000,
+      "date": "2024-09-05T15:23:40.097Z",
+      "availableQuantity": 44
+    },
+    {
+      "id": "0d2a",
+      "name": "Panda mart ",
+      "details": "An online groceries shopping site",
+      "brandId": "Groceries",
+      "purchasedPrice": 30000,
+      "salesPrice": 50000,
+      "date": "2024-09-05T15:25:08.300Z",
+      "availableQuantity": 1
+    },
+    {
+      "id": "21ec",
+      "name": "Ikea",
+      "details": "An international Swedish furniture brand ",
+      "brandId": "Furniture",
+      "purchasedPrice": 40000,
+      "salesPrice": 70000,
+      "date": "2024-09-05T15:25:58.122Z",
+      "availableQuantity": 24
+    },
+    {
+      "id": "0a71",
+      "name": "Toys",
+      "details": "For the children",
+      "brandId": "Extra Things",
+      "purchasedPrice": 4000,
+      "salesPrice": 5000,
+      "date": "2024-09-05T15:26:58.233Z",
+      "availableQuantity": 89
     }
   ],
   "orders": [

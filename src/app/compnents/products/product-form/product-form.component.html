@@ -5,7 +5,7 @@
     class="shadow border bg-white p-8"
   >
     @if (product) {
-    <h1 class="text-xl font-semibold">Update Products</h1>
+    <h1 class="text-xl font-semibold" >Update Products</h1>
     } @else {
     <h1 class="text-xl font-semibold">Add Products</h1>
     }
@@ -48,7 +48,7 @@
       </div>
 
       <div class="w-full">
-        <mat-label>Saling Price</mat-label>
+        <mat-label>Seling Price</mat-label>
         <mat-form-field class="w-full">
           <input type="number" matInput formControlName="salesPrice" />
         </mat-form-field>
@@ -59,7 +59,7 @@
         <mat-form-field>
           <mat-label>Choose a date</mat-label>
           <input matInput [matDatepicker]="picker" formControlName="date"/>
-          <mat-hint>DD/MM/YYYY</mat-hint>
+          <mat-hint>MM/DD/YYYY</mat-hint>
           <mat-datepicker-toggle
             matIconSuffix
             [for]="picker"
@@ -73,11 +73,11 @@
       <!-- Start of the Button -->
       <div class="w-full flex justify-center">
         @if (product) {
-        <button mat-raised-button color="primary" (click)="updateProduct()">
+        <button mat-raised-button class="custom-pink-button" (click)="updateProduct() ">
           Update
         </button>
         } @else {
-        <button mat-raised-button color="primary" (click)="addProduct()">
+        <button mat-raised-button class="custom-pink-button" (click)="addProduct()">
           Add
         </button>
         }
