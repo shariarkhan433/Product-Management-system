@@ -1,27 +1,39 @@
 # Myapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+This project was generated with [Angular CLI] version 18.2.0.
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Then open another terminal and run  `npm run server` to initiate the local JSON server.
 
-## Code scaffolding
+## Additional setup
+In your Angular development environment, you need to run these commands.
+`ng add @angular/material`
+`npm install -D tailwindcss postcss autoprefixer`
+`npx tailwindcss init`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Then you need to create environment folder.
+`ng g e environments`
+There create(if not already) and inside environment.ts and environment.development.ts folder, paste this code
 
-## Build
+```
+export const environment = {
+  apiURL : 'http://localhost:3000',
+};
+```
+This is the API call which was avoided to push into github as the standard practice of development.
+It is then used in the sevice field.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Extra Features
+As fullfilling the required features, I have also instated some extra features to make the app more appealing. 
+- Sorting is available in products table.
+- pop-up message is shown for every action.
+- Auto complete Total amount and Sale price in the Add order page.
+- While selecting category in order page, it shows current available item remaining.
+- A landing page which shows the current state of our inventory.
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+If there is any difficulties in running the program, feel free to reach out at [kshariare@gmail.com] (kshariare@gmail.com)
