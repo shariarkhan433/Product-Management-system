@@ -36,4 +36,4 @@ As fullfilling the required features, I have also instated some extra features t
 
 ## Further help
 
-If there is any difficulties in running the program, feel free to reach out at [kshariare@gmail.com] (kshariare@gmail.com)
+If there is any difficulties in running the program, feel free to reach out at [kshariare@gmail.com]
